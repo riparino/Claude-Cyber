@@ -26,17 +26,60 @@ Claude-Red/
 
 ---
 
-### Claude-Blue *(coming soon)*
+### [Claude-Blue](./Claude-Blue/)
 
-Defensive security skills — structured `SKILL.md` files for threat detection, incident response, log analysis, hardening, and SOC workflows.
+Defensive security skills — 43 structured `SKILL.md` files covering threat detection, incident response, log analysis, cloud hardening, and SOC workflows. Detection rules in Sigma (generic SIEM), KQL (Azure Sentinel/MDE), and YARA.
 
 ```
 Claude-Blue/
-└── Skills/
-    ├── defensive-threat-hunting/
-    ├── defensive-log-analysis/
-    └── ...
+├── Skills/
+│   ├── defensive-xss/
+│   ├── defensive-sqli/
+│   ├── defensive-rce/
+│   ├── defensive-ssrf/
+│   ├── defensive-file-upload/
+│   ├── defensive-deserialization/
+│   ├── defensive-ssti/
+│   ├── defensive-xxe/
+│   ├── defensive-jwt/
+│   ├── defensive-oauth/
+│   ├── defensive-idor/
+│   ├── defensive-open-redirect/
+│   ├── defensive-parameter-pollution/
+│   ├── defensive-initial-access/
+│   ├── defensive-edr-evasion/
+│   ├── defensive-shellcode/
+│   ├── defensive-windows-mitigations/
+│   ├── defensive-windows-hardening/
+│   ├── defensive-exploit-detection/
+│   ├── defensive-basic-exploitation/
+│   ├── defensive-mitigations/
+│   ├── defensive-keylogger-detection/
+│   ├── defensive-race-condition/
+│   ├── defensive-graphql/
+│   ├── defensive-request-smuggling/
+│   ├── defensive-waf-hardening/
+│   ├── defensive-vuln-classes/
+│   ├── defensive-vulnerability-management/
+│   ├── defensive-crash-analysis/
+│   ├── defensive-opsec/
+│   ├── defensive-exposure-management/
+│   ├── defensive-threat-hunting/
+│   ├── defensive-fast-triage/
+│   ├── defensive-secure-dev-course/
+│   ├── defensive-fuzzing/
+│   ├── defensive-ai-security/
+│   ├── defensive-incident-response/
+│   ├── defensive-threat-intelligence/
+│   ├── defensive-detection-engineering/
+│   ├── defensive-cloud-hardening/
+│   ├── defensive-soc-workflows/
+│   └── defensive-log-analysis/
+└── sources/
+    └── defensive-checklist/   ← raw detection methodology sources
 ```
+
+→ See [Claude-Blue/README.md](./Claude-Blue/README.md) for the full skill index.
 
 ---
 
@@ -45,8 +88,8 @@ Claude-Blue/
 ```
 claude-cyber/
 ├── README.md              ← you are here
-├── Claude-Red/            ← offensive skills
-└── Claude-Blue/           ← defensive skills (coming soon)
+├── Claude-Red/            ← offensive skills (38 skills)
+└── Claude-Blue/           ← defensive skills (43 skills)
 ```
 
 ---
