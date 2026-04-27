@@ -1,4 +1,4 @@
 *.zip
 .DS_Store
-/Claude-Red/.DS_Store
-/Claude-Red/*.zip
+Claude-*/.DS_Store
+/Claude-*/*.zip
