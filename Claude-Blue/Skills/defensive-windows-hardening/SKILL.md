@@ -8,7 +8,7 @@ description: "Windows security boundaries hardening and detection: UAC bypass vi
 ## Metadata
 - **Skill Name**: defensive-windows-hardening
 - **Folder**: Skills/defensive-windows-hardening
-- **Source**: sources/defensive-checklist/windows-boundaries.md
+- **Source**: sources/defensive-checklist/windows-hardening.md
 - **Mirrors**: offensive-windows-boundaries
 
 ## Trigger Phrases

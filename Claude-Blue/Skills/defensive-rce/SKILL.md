@@ -293,3 +293,31 @@ DeviceFileEvents
 | Web Shell | T1505.003 | Webshell deployment |
 | Command and Scripting Interpreter | T1059 | Command injection execution |
 | Ingress Tool Transfer | T1105 | Tool download via RCE |
+
+---
+
+## References & Verified Sources
+
+**MITRE ATT&CK**
+- T1190 Exploit Public-Facing Application: https://attack.mitre.org/techniques/T1190/
+- T1059 Command and Scripting Interpreter: https://attack.mitre.org/techniques/T1059/
+- T1505.003 Web Shell: https://attack.mitre.org/techniques/T1505/003/
+- T1105 Ingress Tool Transfer: https://attack.mitre.org/techniques/T1105/
+
+**Detection tables / docs**
+- `DeviceProcessEvents` schema: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table
+- `DeviceNetworkEvents` schema: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table
+- Sysmon Event ID 1 (process create): https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+- Azure WAF (App Gateway) logs: https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/web-application-firewall-logs
+
+**Detection content**
+- SigmaHQ web/process_creation rules: https://github.com/SigmaHQ/sigma/tree/master/rules/windows/process_creation
+- Microsoft Sentinel "WebShell" hunting queries: https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries
+- Florian Roth webshell YARA rules: https://github.com/Neo23x0/signature-base/tree/master/yara
+
+**Reference incidents (CVE)**
+- Log4Shell — CVE-2021-44228: https://nvd.nist.gov/vuln/detail/CVE-2021-44228
+- Spring4Shell — CVE-2022-22965: https://nvd.nist.gov/vuln/detail/CVE-2022-22965
+- ProxyShell — CVE-2021-34473: https://nvd.nist.gov/vuln/detail/CVE-2021-34473
+- MOVEit — CVE-2023-34362: https://nvd.nist.gov/vuln/detail/CVE-2023-34362
+- Confluence OGNL — CVE-2022-26134: https://nvd.nist.gov/vuln/detail/CVE-2022-26134

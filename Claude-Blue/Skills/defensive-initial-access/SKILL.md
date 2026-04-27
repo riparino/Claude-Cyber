@@ -119,3 +119,29 @@ EmailEvents
 | Spearphishing Link | T1566.002 | Phishing link exploitation |
 | Drive-by Compromise | T1189 | Browser exploitation |
 | Valid Accounts | T1078 | Stolen credential use |
+
+---
+
+## References & Verified Sources
+
+**MITRE ATT&CK**
+- Initial Access tactic (TA0001): https://attack.mitre.org/tactics/TA0001/
+- T1566 Phishing: https://attack.mitre.org/techniques/T1566/
+- T1078 Valid Accounts: https://attack.mitre.org/techniques/T1078/
+- T1189 Drive-by Compromise: https://attack.mitre.org/techniques/T1189/
+- T1190 Exploit Public-Facing Application: https://attack.mitre.org/techniques/T1190/
+
+**Microsoft Defender / Sentinel KQL tables**
+- `EmailEvents` schema: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-emailevents-table
+- `EmailUrlInfo` schema: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-emailurlinfo-table
+- `SigninLogs` schema: https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/signinlogs
+- `AADRiskyUsers` / Identity Protection: https://learn.microsoft.com/en-us/entra/id-protection/
+
+**Detection content**
+- Microsoft Sentinel detections (GitHub): https://github.com/Azure/Azure-Sentinel/tree/master/Detections
+- AiTM phishing detection guidance (MS Security blog): https://www.microsoft.com/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/
+- SigmaHQ phishing & initial-access rules: https://github.com/SigmaHQ/sigma/tree/master/rules/category/web
+
+**Reference incidents (CVE / campaign)**
+- Midnight Blizzard (Storm-0558) token theft: https://msrc.microsoft.com/blog/2023/09/results-of-major-technical-investigations-for-storm-0558-key-acquisition/
+- ProxyShell (CVE-2021-34473, CVE-2021-34523, CVE-2021-31207): https://nvd.nist.gov/vuln/detail/CVE-2021-34473

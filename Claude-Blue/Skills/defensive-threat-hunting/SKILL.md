@@ -94,3 +94,29 @@ Hunt ID: HUNT-YYYY-NNN | Hypothesis: | MITRE: | Findings: | Promoted: Y/N
 | Scheduled Task | T1053.005 | Task creation query |
 | LSASS Memory | T1003.001 | LSASS access detection |
 | Exfiltration Over C2 | T1041 | Large outbound query |
+
+---
+
+## References & Verified Sources
+
+**Methodology**
+- SANS — The Threat Hunting Loop / Sqrrl framework: https://www.sans.org/white-papers/36785/
+- David Bianco — Pyramid of Pain: https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html
+- MITRE TTP-Based Hunting (MITRE Tech Report MTR-190431): https://www.mitre.org/sites/default/files/publications/pr-19-3892-ttp-based-hunting.pdf
+
+**MITRE ATT&CK references**
+- T1218 Signed Binary Proxy Execution / LOLBAS: https://attack.mitre.org/techniques/T1218/
+- T1003.001 LSASS Memory: https://attack.mitre.org/techniques/T1003/001/
+- T1041 Exfiltration Over C2 Channel: https://attack.mitre.org/techniques/T1041/
+- ATT&CK Navigator: https://mitre-attack.github.io/attack-navigator/
+
+**Hunt query libraries**
+- LOLBAS project: https://lolbas-project.github.io/
+- GTFOBins: https://gtfobins.github.io/
+- Microsoft Sentinel Hunting Queries: https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries
+- MDE Advanced Hunting query pack: https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries
+- Elastic detection-rules (hunting): https://github.com/elastic/detection-rules
+
+**KQL references**
+- KQL quick reference: https://learn.microsoft.com/en-us/azure/data-explorer/kql-quick-reference
+- Advanced hunting schema reference: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-schema-tables

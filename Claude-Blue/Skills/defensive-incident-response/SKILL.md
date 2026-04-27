@@ -92,3 +92,23 @@ DeviceNetworkEvents
 |---|---|---|
 | Lateral Movement | T1021 | Containment scope |
 | Persistence | T1053, T1547 | Eradication |
+
+---
+
+## References & Verified Sources
+
+**Frameworks & playbooks**
+- NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide: https://csrc.nist.gov/pubs/sp/800/61/r2/final
+- SANS Incident Handler's Handbook (PICERL): https://www.sans.org/white-papers/33901/
+- Microsoft Incident Response Playbooks: https://learn.microsoft.com/en-us/security/operations/incident-response-playbooks
+- CISA Federal Government Cybersecurity Incident & Vulnerability Response Playbooks: https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf
+
+**Microsoft Defender / Sentinel actions**
+- MDE machine isolation API: https://learn.microsoft.com/en-us/defender-endpoint/api/isolate-machine
+- Entra ID — revoke user sessions: https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access
+- Reset krbtgt password (twice) guidance: https://learn.microsoft.com/en-us/defender-for-identity/cas-isp-reset-krbtgt
+- Sentinel automation rules / playbooks: https://learn.microsoft.com/en-us/azure/sentinel/automate-incident-handling-with-automation-rules
+
+**Hunt query libraries**
+- Microsoft Sentinel Hunting Queries: https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries
+- MDE Advanced Hunting query pack: https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries

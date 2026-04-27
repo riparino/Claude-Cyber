@@ -134,3 +134,29 @@ OfficeActivity
 | Web Session Cookie Theft | T1539 | AiTM session hijack |
 | Use Alternate Auth Material | T1550 | OAuth token replay |
 | Phishing | T1566 | Consent phishing campaign |
+
+---
+
+## References & Verified Sources
+
+**Specifications**
+- RFC 6749 — OAuth 2.0 Authorization Framework: https://datatracker.ietf.org/doc/html/rfc6749
+- RFC 6819 — OAuth 2.0 Threat Model & Security Considerations: https://datatracker.ietf.org/doc/html/rfc6819
+- RFC 8252 — OAuth 2.0 for Native Apps: https://datatracker.ietf.org/doc/html/rfc8252
+- RFC 9700 — OAuth 2.0 Security Best Current Practice: https://datatracker.ietf.org/doc/html/rfc9700
+
+**MITRE ATT&CK**
+- T1528 Steal Application Access Token: https://attack.mitre.org/techniques/T1528/
+- T1539 Steal Web Session Cookie: https://attack.mitre.org/techniques/T1539/
+- T1550 Use Alternate Authentication Material: https://attack.mitre.org/techniques/T1550/
+- T1566 Phishing: https://attack.mitre.org/techniques/T1566/
+
+**Microsoft guidance & detections**
+- Detect & remediate illicit consent grants: https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants
+- App consent policies: https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent
+- Risk-based Conditional Access: https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies
+- Sentinel — OAuth & consent phishing detections: https://github.com/Azure/Azure-Sentinel/tree/master/Detections/AuditLogs
+
+**Reference incidents**
+- Midnight Blizzard OAuth consent attacks: https://www.microsoft.com/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/
+- "PwnAuth" — illicit consent phishing toolkit (FireEye): https://cloud.google.com/blog/topics/threat-intelligence/pwnauth/

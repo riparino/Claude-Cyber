@@ -1,6 +1,6 @@
 # claude-blue
 
-> 43 defensive security skills for Claude — structured SKILL.md files for threat detection, incident response, log analysis, hardening, and SOC workflows.
+> 42 defensive security skills for Claude — structured SKILL.md files for threat detection, incident response, log analysis, hardening, and SOC workflows.
 
 Built by **[riparino](https://github.com/riparino)** — companion to [claude-red](../Claude-Red/).
 
@@ -35,12 +35,12 @@ claude-blue/
 │   │   └── SKILL.md
 │   ├── defensive-sqli/
 │   │   └── SKILL.md
-│   └── ... (43 total)
+│   └── ... (42 total)
 └── sources/
     └── defensive-checklist/
         ├── xss.md
         ├── sqli.md
-        └── ... (43 raw source files)
+        └── ... (42 raw source files)
 ```
 
 Each `Skills/` directory is a self-contained skill. Point Claude at the relevant `SKILL.md` before your session begins.

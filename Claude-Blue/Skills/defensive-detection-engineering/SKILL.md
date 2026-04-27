@@ -96,3 +96,33 @@ SecurityAlert
 ## MITRE ATT&CK
 
 Coverage mapping via [ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/): import rule tag JSON; identify red cells (gaps) to prioritize.
+
+
+---
+
+## References & Verified Sources
+
+**Methodology**
+- Palantir Alerting and Detection Strategy (ADS) framework: https://github.com/palantir/alerting-detection-strategy-framework
+- Florian Roth — "About Detection Engineering": https://cyb3rops.medium.com/about-detection-engineering-44d39e0755f0
+- SpecterOps — Capability Abstraction: https://posts.specterops.io/capability-abstraction-fbeaeeb26384
+- Detection Engineering Maturity Matrix: https://detectionengineering.io/
+
+**Frameworks & references**
+- MITRE ATT&CK: https://attack.mitre.org/
+- ATT&CK Navigator: https://mitre-attack.github.io/attack-navigator/
+- D3FEND knowledge graph: https://d3fend.mitre.org/
+- MITRE CAR (Cyber Analytics Repository): https://car.mitre.org/
+
+**Rule repositories**
+- SigmaHQ rules: https://github.com/SigmaHQ/sigma
+- Sigma specification: https://github.com/SigmaHQ/sigma-specification
+- sigma-cli (convert Sigma → KQL/Splunk/etc.): https://github.com/SigmaHQ/sigma-cli
+- Elastic detection-rules: https://github.com/elastic/detection-rules
+- Microsoft Sentinel Detections: https://github.com/Azure/Azure-Sentinel/tree/master/Detections
+- Microsoft Sentinel ASIM (normalization): https://learn.microsoft.com/en-us/azure/sentinel/normalization
+
+**Testing & validation**
+- Atomic Red Team: https://github.com/redcanaryco/atomic-red-team
+- DetectionLab: https://github.com/clong/DetectionLab
+- Mordor / Security Datasets: https://github.com/OTRF/Security-Datasets

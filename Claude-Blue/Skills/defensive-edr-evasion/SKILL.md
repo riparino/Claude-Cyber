@@ -134,3 +134,29 @@ DeviceProcessEvents
 | Process Injection | T1055 | Remote thread, reflective DLL |
 | Access Token Manipulation: PPID Spoof | T1134.004 | PPID spoofing |
 | Disable Security Tools | T1562.001 | AMSI/ETW bypass |
+
+---
+
+## References & Verified Sources
+
+**MITRE ATT&CK**
+- T1055 Process Injection: https://attack.mitre.org/techniques/T1055/
+- T1134 Access Token Manipulation: https://attack.mitre.org/techniques/T1134/
+- T1134.004 PPID Spoofing: https://attack.mitre.org/techniques/T1134/004/
+- T1562.001 Disable or Modify Tools: https://attack.mitre.org/techniques/T1562/001/
+- T1620 Reflective Code Loading: https://attack.mitre.org/techniques/T1620/
+
+**Detection tables / docs**
+- `DeviceImageLoadEvents`: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceimageloadevents-table
+- `DeviceEvents`: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceevents-table
+- AMSI overview: https://learn.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal
+- ETW (Event Tracing for Windows): https://learn.microsoft.com/en-us/windows/win32/etw/event-tracing-portal
+
+**Detection content**
+- Elastic detection rules (defense_evasion): https://github.com/elastic/detection-rules/tree/main/rules/windows/defense_evasion
+- SigmaHQ defense_evasion rules: https://github.com/SigmaHQ/sigma/tree/master/rules/windows/process_creation
+- Red Canary Atomic Red Team T1055: https://github.com/redcanaryco/atomic-red-team/tree/master/atomics/T1055
+
+**Background research**
+- "Hells Gate" / direct syscalls (am0nsec & smelly__vx): https://github.com/am0nsec/HellsGate
+- "Bring Your Own Vulnerable Driver" (BYOVD) — CVE-2023-21768 etc.: https://nvd.nist.gov/vuln/detail/CVE-2023-21768

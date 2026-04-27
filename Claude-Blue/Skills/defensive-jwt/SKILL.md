@@ -130,3 +130,30 @@ MFASuccess
 | Use Alternate Auth Material | T1550.004 | JWT bypass / forged token |
 | Brute Force | T1110 | JWT secret brute force |
 | Steal Application Access Token | T1528 | JWT theft |
+
+---
+
+## References & Verified Sources
+
+**Specifications**
+- RFC 7519 — JSON Web Token (JWT): https://datatracker.ietf.org/doc/html/rfc7519
+- RFC 7515 — JSON Web Signature (JWS): https://datatracker.ietf.org/doc/html/rfc7515
+- RFC 8725 — JWT Best Current Practices: https://datatracker.ietf.org/doc/html/rfc8725
+
+**MITRE ATT&CK**
+- T1550.004 Web Session Cookie / Alternate Auth: https://attack.mitre.org/techniques/T1550/004/
+- T1528 Steal Application Access Token: https://attack.mitre.org/techniques/T1528/
+- T1110 Brute Force: https://attack.mitre.org/techniques/T1110/
+
+**OWASP & guidance**
+- OWASP JWT Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html
+- Auth0 — Critical vulnerabilities in JSON Web Token libraries: https://auth0.com/blog/critical-vulnerabilities-in-json-web-token-libraries/
+
+**Microsoft Entra ID token references**
+- Access tokens (v1.0/v2.0): https://learn.microsoft.com/en-us/entra/identity-platform/access-tokens
+- ID tokens: https://learn.microsoft.com/en-us/entra/identity-platform/id-tokens
+- Token theft detection (Entra ID Protection): https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protection-risks
+
+**Reference CVEs**
+- CVE-2015-9235 jsonwebtoken alg confusion: https://nvd.nist.gov/vuln/detail/CVE-2015-9235
+- CVE-2022-21449 Java ECDSA blank-signature bypass ("Psychic Signatures"): https://nvd.nist.gov/vuln/detail/CVE-2022-21449

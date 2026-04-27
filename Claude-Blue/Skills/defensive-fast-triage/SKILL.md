@@ -98,3 +98,23 @@ Escalate immediately:
 | OS Credential Dumping | T1003 | Immediate |
 | Scheduled Task | T1053.005 | High |
 | Disable Security Tools | T1562 | High |
+
+---
+
+## References & Verified Sources
+
+**MITRE ATT&CK**
+- T1203 Exploitation for Client Execution: https://attack.mitre.org/techniques/T1203/
+- T1003 OS Credential Dumping: https://attack.mitre.org/techniques/T1003/
+- T1053.005 Scheduled Task: https://attack.mitre.org/techniques/T1053/005/
+- T1562 Impair Defenses: https://attack.mitre.org/techniques/T1562/
+
+**Microsoft docs**
+- Defender XDR alert investigation: https://learn.microsoft.com/en-us/defender-xdr/investigate-alerts
+- `DeviceAlertEvents`: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicealertevents-table
+- AiTM phishing investigation guidance: https://learn.microsoft.com/en-us/defender-xdr/alert-grading-playbook-aitm
+- Sentinel incident triage: https://learn.microsoft.com/en-us/azure/sentinel/investigate-cases
+
+**Triage methodology references**
+- SANS SOC Survey & SOC Class SEC450: https://www.sans.org/cyber-security-courses/blue-team-fundamentals-security-operations-analysis/
+- Palantir Alerting and Detection Strategy framework: https://github.com/palantir/alerting-detection-strategy-framework

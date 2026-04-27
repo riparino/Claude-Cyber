@@ -104,3 +104,30 @@ SecurityResources
 | Valid Accounts | T1078 | MFA + Conditional Access |
 | Abuse Elevation | T1548 | PIM |
 | Data from Cloud Storage | T1530 | Defender for Storage |
+
+---
+
+## References & Verified Sources
+
+**MITRE ATT&CK (Cloud matrix)**
+- Cloud matrix: https://attack.mitre.org/matrices/enterprise/cloud/
+- T1078.004 Valid Accounts: Cloud Accounts: https://attack.mitre.org/techniques/T1078/004/
+- T1530 Data from Cloud Storage: https://attack.mitre.org/techniques/T1530/
+- T1548 Abuse Elevation Control: https://attack.mitre.org/techniques/T1548/
+
+**Microsoft baselines & guidance**
+- Azure Security Benchmark v3: https://learn.microsoft.com/en-us/security/benchmark/azure/overview
+- Microsoft Cloud Security Benchmark (MCSB): https://learn.microsoft.com/en-us/security/benchmark/azure/introduction
+- Conditional Access policy templates: https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-policy-common
+- Privileged Identity Management (PIM): https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure
+- Defender for Cloud secure score: https://learn.microsoft.com/en-us/azure/defender-for-cloud/secure-score-security-controls
+
+**KQL tables**
+- `SigninLogs`: https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/signinlogs
+- `AuditLogs`: https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/auditlogs
+- `AzureActivity`: https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/azureactivity
+- `CloudAppEvents` (MDA): https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-cloudappevents-table
+
+**Reference standards**
+- CIS Microsoft Azure Foundations Benchmark: https://www.cisecurity.org/benchmark/azure
+- NIST SP 800-207 Zero Trust Architecture: https://csrc.nist.gov/pubs/sp/800/207/final

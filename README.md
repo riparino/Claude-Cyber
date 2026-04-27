@@ -28,7 +28,7 @@ Claude-Red/
 
 ### [Claude-Blue](./Claude-Blue/)
 
-Defensive security skills — 43 structured `SKILL.md` files covering threat detection, incident response, log analysis, cloud hardening, and SOC workflows. Detection rules in Sigma (generic SIEM), KQL (Azure Sentinel/MDE), and YARA.
+Defensive security skills — 42 structured `SKILL.md` files covering threat detection, incident response, log analysis, cloud hardening, and SOC workflows. Detection rules in Sigma (generic SIEM), KQL (Azure Sentinel/MDE), and YARA.
 
 ```
 Claude-Blue/
@@ -89,7 +89,7 @@ Claude-Blue/
 claude-cyber/
 ├── README.md              ← you are here
 ├── Claude-Red/            ← offensive skills (38 skills)
-└── Claude-Blue/           ← defensive skills (43 skills)
+└── Claude-Blue/           ← defensive skills (42 skills)
 ```
 
 ---
