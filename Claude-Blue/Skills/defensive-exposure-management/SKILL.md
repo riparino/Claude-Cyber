@@ -1,6 +1,6 @@
 ---
 name: defensive-exposure-management
-description: "Attack surface management and exposure management: continuous asset discovery, port scan detection, cloud misconfiguration detection, shadow IT, subdomain takeover prevention. Sigma for port scan bursts. KQL (Sentinel) and Azure Resource Graph queries for internet-facing asset exposure and Defender for Cloud recommendations."
+description: "Attack surface management and exposure management: continuous asset discovery, port scan detection, cloud misconfiguration detection, shadow IT, subdomain takeover prevention. Sigma for [...]
 ---
 
 # SKILL: Exposure Management
@@ -49,7 +49,7 @@ When this skill is active:
 SecurityResources
 | where type == "microsoft.security/assessments"
 | where properties.status.code == "Unhealthy"
-| extend ResourceId = tostring(properties.resourceDetails.id)
+| extend ResourceId = tostring(properties.resourceDetails.NativeResourceId)
 | where ResourceId contains "virtualMachines"
 | project TimeGenerated=todatetime(properties.timeGenerated), ResourceId,
           Assessment=tostring(properties.displayName),
