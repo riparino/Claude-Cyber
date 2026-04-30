@@ -1,6 +1,6 @@
 ---
 name: defensive-incident-response
-description: "Incident response playbook: PICERL lifecycle phases, containment decision matrix, evidence collection order, KQL hunt queries per phase. MDE host isolation, lateral movement scoping, persistence eradication, recovery verification. Use for SOC IR operations and breach response."
+description: "Incident response playbook: PICERL lifecycle phases, containment decision matrix, evidence collection order, KQL hunt queries per phase. MDE host isolation, lateral movement scoping, persistence cleanup, credential rotation."
 ---
 
 # SKILL: Incident Response
@@ -34,7 +34,7 @@ When this skill is active:
 | Phase | Key Actions | KQL Table |
 |---|---|---|
 | Preparation | IR plan, contacts, tools | — |
-| Identification | Triage, scope, IOC confirm | `DeviceAlertEvents`, `SigninLogs` |
+| Identification | Triage, scope, IOC confirm | `AlertInfo`, `AlertEvidence`, `SigninLogs` |
 | Containment | Isolate, block, disable | MDE portal actions |
 | Eradication | Remove, rotate, patch | `DeviceFileEvents`, `DeviceRegistryEvents` |
 | Recovery | Restore, monitor | `DeviceProcessEvents` |
@@ -47,11 +47,16 @@ When this skill is active:
 ### Critical Alerts (Identification)
 
 ```kusto
-DeviceAlertEvents
+AlertInfo
 | where TimeGenerated > ago(24h)
 | where Severity in ("High", "Critical")
+| join kind=inner (
+    AlertEvidence
+    | where EntityType == "Machine"
+    | project AlertId, DeviceName
+) on AlertId
 | summarize AlertCount=count() by DeviceName, Title, Severity
-| order by Severity, AlertCount desc
+| order by Severity asc, AlertCount desc
 ```
 
 ### Lateral Movement Scope (Containment)
@@ -101,13 +106,17 @@ DeviceNetworkEvents
 - NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide: https://csrc.nist.gov/pubs/sp/800/61/r2/final
 - SANS Incident Handler's Handbook (PICERL): https://www.sans.org/white-papers/33901/
 - Microsoft Incident Response Playbooks: https://learn.microsoft.com/en-us/security/operations/incident-response-playbooks
-- CISA Federal Government Cybersecurity Incident & Vulnerability Response Playbooks: https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf
+- CISA Federal Government Cybersecurity Incident & Vulnerability Response Playbooks: https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks.pdf
 
 **Microsoft Defender / Sentinel actions**
 - MDE machine isolation API: https://learn.microsoft.com/en-us/defender-endpoint/api/isolate-machine
 - Entra ID — revoke user sessions: https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access
 - Reset krbtgt password (twice) guidance: https://learn.microsoft.com/en-us/defender-for-identity/cas-isp-reset-krbtgt
 - Sentinel automation rules / playbooks: https://learn.microsoft.com/en-us/azure/sentinel/automate-incident-handling-with-automation-rules
+
+**Advanced Hunting table reference**
+- AlertInfo schema: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-alertinfo-table
+- AlertEvidence schema: https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-alertevidence-table
 
 **Hunt query libraries**
 - Microsoft Sentinel Hunting Queries: https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries
